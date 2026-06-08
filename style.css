@@ -8,12 +8,12 @@ body {
     transform: translate(-50%, -50%);
 }
 #terminal {
+    z-index: 2;
     color: white;
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;;
+    font-family: ui-monospace, monospace;
     position: fixed;
     background-color: black;
-    interpolate-size: allow-keywords;
-    min-width: 30vw;
+    min-width: 200px;
     width: auto;
     height: auto;
     top: 35px;
@@ -43,5 +43,34 @@ body {
 #terminal-text {
     display: block;
     padding: 0;
+    margin: 0;
+}
+#codeterminal {
+    z-index: 2;
+    color: white;
+    font-family: ui-monospace, monospace;
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.2s ease, scale 0.2s ease;
+    opacity: 0;
+    scale: 0.9;
+    margin: 0;
+}
+#codeterminal.show {
+    opacity: 1 !important;
+    scale: 1 !important;
+}
+#codeterminal-title {
+    background-color: black;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 0;
+}
+#codeterminal-code {
+    background-color: black;
+    padding: 20px;
+    border-radius: 8px;
     margin: 0;
 }
