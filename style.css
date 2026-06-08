@@ -7,3 +7,41 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+#terminal {
+    color: white;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;;
+    position: fixed;
+    background-color: black;
+    interpolate-size: allow-keywords;
+    min-width: 30vw;
+    width: auto;
+    height: auto;
+    top: 35px;
+    left: 35px;
+    border-radius: 8px;
+    padding: 20px;
+}
+#terminal > div {
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+}
+#terminal > div > div {
+    width: 18px;
+    height: 18px;
+    border-radius: 9999px;
+}
+#terminal-buddy {
+    display: block;
+    font-size: 100px;
+    padding: 0;
+    margin: 10px 0;
+}
+#terminal-buddy:empty {
+    margin: 0;
+}
+#terminal-text {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
