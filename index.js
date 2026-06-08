@@ -12,9 +12,11 @@ const keys = {
     d: false
 }
 document.addEventListener('keydown', (event) => {
+    if (document.activeElement.isContentEditable) return;
     if (event.key in keys) keys[event.key] = true;
 });
 document.addEventListener('keyup', (event) => {
+    if (document.activeElement.isContentEditable) return;
     if (event.key in keys) keys[event.key] = false;
 });
 function setCharacterPosition() {

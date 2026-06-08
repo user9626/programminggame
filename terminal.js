@@ -20,7 +20,7 @@ export function terminal_buddy(text1, text2) {
         }
     })()
     return () => {
-        talking = false
+        talking = false;
     }
 }
 
