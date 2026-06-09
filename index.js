@@ -14,11 +14,11 @@ const keys = {
     d: false
 }
 document.addEventListener('keydown', (event) => {
-    if (document.activeElement.tagName === "INPUT") return;
+    if (document.activeElement.tagName === "TEXTAREA") return;
     if (event.key in keys) keys[event.key] = true;
 });
 document.addEventListener('keyup', (event) => {
-    if (document.activeElement.tagName === "INPUT") return;
+    if (document.activeElement.tagName === "TEXTAREA") return;
     if (event.key in keys) keys[event.key] = false;
 });
 function setCharacterPosition() {
@@ -85,11 +85,11 @@ characterMovementLoop();
     await wait(4000)
 
     setTimeout(terminal_buddy("(⋅ o ⋅)", "(⋅ _ ⋅)"), 1000);
-    terminal_text("Personally, the first programming language I every learned was Python, one of the most popular programming languages in the world; it was created all the way back in 1991.", 2000);
+    terminal_text("Personally, the first programming language I every learned was Python, one of the most popular programming languages in the world. It was created all the way back in 1991.", 2000);
     await wait(9000)
 
-    setTimeout(terminal_buddy("(⋅ o ⋅)", "(⋅ _ ⋅)"), 1000);
-    terminal_text("I enjoy coding because it's a space where you can create whatever you want, like any other art form; but in the DIGITAL WORLD!", 2000);
+    setTimeout(terminal_buddy("(★ o ★)", "(★ _ ★)"), 1000);
+    terminal_text("I enjoy coding because it's a space where you can create whatever you want, like any other art form, but in the DIGITAL WORLD!", 2000);
     await wait(9000)
 
     setTimeout(terminal_buddy("(⋅ o ⋅)", "(⋅ _ ⋅)"), 1000);
