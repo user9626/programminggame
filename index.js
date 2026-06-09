@@ -1,5 +1,6 @@
 // IMPORTS
-import {terminal_buddy, terminal_text} from "./terminal.js"
+import { terminal_buddy, terminal_text } from "./terminal.js"
+import { runPuzzle } from "./codeterminal.js"
 
 // CHARACTER MOVEMENT
 let lastMs = 0
@@ -50,6 +51,9 @@ function characterMovementLoop(timestampMs) {
 characterMovementLoop()
 
 // Terminal
+setTimeout(() => {
+    document.getElementById("terminal").classList.add("full")
+}, 50000);
 const cool = terminal_buddy("(・o・)", "(・_・)");
 setTimeout(cool, 1000);
 terminal_text("Hello this is a great great text", 1000)
