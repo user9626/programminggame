@@ -154,5 +154,5 @@ characterMovementLoop();
     terminal_text("Thanks for playing! I hope you learned a bit about the fundementals of coding, or even just what a function is; so thanks!", 1000);
     await wait(8000)
 
-    window.location.replace("/onboarding.html")
+    window.location.replace("./onboarding.html")
 })();
