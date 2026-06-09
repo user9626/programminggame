@@ -33,5 +33,5 @@ export async function terminal_text(text, timeMs) {
         terminal_text_node.textContent = text.slice(0, i+1)
         await new Promise(resolve => setTimeout(resolve, timePerChar))
     }
-    terminal_text_node.innerHTML = text
+    terminal_text_node.textContent = text
 }

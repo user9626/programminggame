@@ -90,7 +90,7 @@ characterMovementLoop();
     let helloworldpuzzle = await runPuzzle("", 'print("hello world!")'); // idk why but you cant declare the puzzle without await then later await the variable or else the promise values are weird
     while (!helloworldpuzzle.success) {
         setTimeout(terminal_buddy("(⋅ o ⋅)", "(⋅ _ ⋅)"), 1000);
-        await terminal_text("That's not it! Just write "+'print("Hello World!")', 1000);
+        await terminal_text(`That's not it! Just write "+'print("Hello World!"). Don't forget the exclamation mark!`, 1000);
         helloworldpuzzle = await runPuzzle(helloworldpuzzle.raw, 'print("hello world!")')
     }
 
@@ -103,8 +103,8 @@ characterMovementLoop();
     await wait(7000)
 
     setTimeout(terminal_buddy("(^ o ^)", "(^ _ ^)"), 1000);
-    terminal_text("You can use a function by saying its name, like 'print', then using brackets '()' with stuff inside them if you want to tell a function something specific, like 'Hello World'!", 1000);
-    await wait(7000)
+    terminal_text("You can use a function by saying its name, like 'print', then using brackets '()' with stuff inside them if you want to tell a function something specific, like 'Hello World'!", 1500);
+    await wait(11000)
 
     setTimeout(terminal_buddy("(⋅ o ⋅)", "(⋅ _ ⋅)"), 1000);
     terminal_text(`Now, try using this new *special* function called shoot! (try < shoot("Hello World!") > )`, 1000);
@@ -152,7 +152,7 @@ characterMovementLoop();
 
     setTimeout(terminal_buddy("(^ o ^)", "(^ _ ^)"), 1000);
     terminal_text("Thanks for playing! I hope you learned a bit about the fundementals of coding, or even just what a function is; so thanks!", 1000);
-    await wait(8000)
+    await wait(20000)
 
     window.location.replace("./onboarding.html")
 })();
