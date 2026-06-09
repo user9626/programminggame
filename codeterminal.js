@@ -22,10 +22,15 @@ export function runPuzzle(template, answer) {
         codeterminal_run.addEventListener("click", () => {
             let proposed = codeterminal_code.value
             proposed = proposed.trim()
-            proposed = proposed.replace(/#[\s\S]+?\n/, "\n")
-            proposed = proposed.replace("'", '"')
-            proposed = proposed.trim()
-            resolve()
-        })
+            proposed = proposed.replaceAll(/#[\s\S]+?\n/g, "\n")
+            proposed = proposed.replaceAll("'", '"')
+            proposed = proposed.trim();
+            proposed = proposed.toLowerCase();
+            codeterminal.classList.remove("show");
+            resolve({
+                success: answer.trim().toLowerCase() == proposed,
+                raw: codeterminal_code.value
+            })
+        }, {once: true})
     })
 }
