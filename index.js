@@ -67,7 +67,7 @@ function characterMovementLoop(timestampMs) {
 
 characterMovementLoop();
 
-// Terminal
+// GAME
 (async () => {
     async function wait(ms) {
         return new Promise((resolve) => setTimeout(resolve, ms))
@@ -79,6 +79,10 @@ characterMovementLoop();
     await wait(3000)
 
     document.getElementById("terminal").classList.remove("full")
+
+    setTimeout(terminal_buddy("(^ o ^)", "(^ _ ^)"), 1000);
+    terminal_text("You can use WASD to move your character!", 1000);
+    await wait(3000)
 
     setTimeout(terminal_buddy("(^ o ^)", "(^ _ ^)"), 1000);
     terminal_text("This game is going to teach you a few CODING basics and hopefully allow you to give it a try.", 1000);
