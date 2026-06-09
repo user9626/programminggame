@@ -85,7 +85,7 @@ characterMovementLoop();
     await wait(4000)
 
     setTimeout(terminal_buddy("(⋅ o ⋅)", "(⋅ _ ⋅)"), 1000);
-    terminal_text("Personally, the first programming language I every learned was Python, one of the most popular programming languages in the world. It was created all the way back in 1991.", 2000);
+    terminal_text("Personally, the first programming language I ever learned was Python, one of the most popular programming languages in the world. It was created all the way back in 1991.", 2000);
     await wait(9000)
 
     setTimeout(terminal_buddy("(★ o ★)", "(★ _ ★)"), 1000);
