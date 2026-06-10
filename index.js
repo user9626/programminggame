@@ -88,20 +88,20 @@ characterMovementLoop();
     terminal_text("This game is going to teach you a few CODING basics and hopefully allow you to give it a try.", 1000);
     await wait(4000)
 
-    setTimeout(terminal_buddy("(⋅ o ⋅)", "(⋅ _ ⋅)"), 1000);
+    setTimeout(terminal_buddy("(⋅ o ⋅)", "(⋅ _ ⋅)"), 2000);
     terminal_text("Personally, the first programming language I ever learned was Python, one of the most popular programming languages in the world. It was created all the way back in 1991.", 2000);
     await wait(9000)
 
-    setTimeout(terminal_buddy("(★ o ★)", "(★ _ ★)"), 1000);
+    setTimeout(terminal_buddy("(★ o ★)", "(★ _ ★)"), 2000);
     terminal_text("I enjoy coding because it's a space where you can create whatever you want, like any other art form, but in the DIGITAL WORLD!", 2000);
     await wait(9000)
 
     setTimeout(terminal_buddy("(⋅ o ⋅)", "(⋅ _ ⋅)"), 1000);
-    terminal_text("To start, let's learn some Python! You've probably seen it before. First, write < "+'print("Hello World!") >', 1000);
+    terminal_text(`To start, let's learn some Python! You've probably seen it before. First, write: \n\nprint("Hello World!")`, 1000);
     let helloworldpuzzle = await runPuzzle("", 'print("hello world!")'); // idk why but you cant declare the puzzle without await then later await the variable or else the promise values are weird
     while (!helloworldpuzzle.success) {
         setTimeout(terminal_buddy("(⋅ o ⋅)", "(⋅ _ ⋅)"), 1000);
-        await terminal_text(`That's not it! Just write < print("Hello World!") >. Don't forget the exclamation mark!`, 1000);
+        await terminal_text(`That's not it! Just write:\n\nprint("Hello World!")\n\nDon't forget the exclamation mark!`, 1000);
         helloworldpuzzle = await runPuzzle(helloworldpuzzle.raw, 'print("hello world!")')
     }
 
@@ -113,16 +113,16 @@ characterMovementLoop();
     terminal_text("That's because you specified the 'print' function, which prints an output! A function is basically just an action, like a verb in english!", 1000);
     await wait(7000)
 
-    setTimeout(terminal_buddy("(^ o ^)", "(^ _ ^)"), 1000);
+    setTimeout(terminal_buddy("(^ o ^)", "(^ _ ^)"), 1500);
     terminal_text("You can use a function by saying its name, like 'print', then using brackets '()' with stuff inside them if you want to tell a function something specific, like 'Hello World'!", 1500);
     await wait(11000)
 
     setTimeout(terminal_buddy("(⋅ o ⋅)", "(⋅ _ ⋅)"), 1000);
-    terminal_text(`Now, try using this new *special* function called shoot! (try < shoot("Hello World!") > )`, 1000);
+    terminal_text(`Now, try using this new *special* function called shoot! Try:\n\nshoot("Hello World!")`, 1000);
     let shootpuzzle = await runPuzzle("", 'shoot("Hello World!")');
     while (!shootpuzzle.success) {
         setTimeout(terminal_buddy("(⋅ o ⋅)", "(⋅ _ ⋅)"), 1000);
-        await terminal_text("That's not it! Just write "+'shoot("Hello World")', 1000);
+        await terminal_text("That's not it! Just write:\n\n"+'shoot("Hello World")', 1000);
         shootpuzzle = await runPuzzle(shootpuzzle.raw, 'shoot("Hello World!")')
     }
 
@@ -137,7 +137,7 @@ characterMovementLoop();
     terminal_text("That's not all though, we can also shoot multiple bullets at once!", 1000);
     await wait(3500)
 
-    setTimeout(terminal_buddy("(^ o ^)", "(^ _ ^)"), 2000);
+    setTimeout(terminal_buddy("(^ o ^)", "(^ _ ^)"), 3000);
     terminal_text("To do this, we can create a loop! Specifically a for loop! To do this in Python, you can do the following:\n\nfor i in range(x):\n   shoot()\n\nWhere x can be replaced with how many times you want to repeat.", 3000);
     await wait(10000)
 
@@ -162,8 +162,12 @@ characterMovementLoop();
     await wait(3000)
 
     setTimeout(terminal_buddy("(^ o ^)", "(^ _ ^)"), 1000);
-    terminal_text("Thanks for playing! I hope you learned a bit about the fundementals of coding, or even just what a function is; so thanks!", 1000);
-    await wait(20000)
+    terminal_text("Now you know some programming basics, and hopefully you learned something new!", 1000);
+    await wait(4000)
+
+    setTimeout(terminal_buddy("(^ o ^)", "(^ _ ^)"), 1000);
+    terminal_text("Thank you for playing!", 1000);
+    await wait(16000)
 
     window.location.replace("./onboarding.html")
 })();
