@@ -20,15 +20,15 @@ export function runPuzzle(template, answer) {
     codeterminal_code.value = template
     return new Promise((resolve) => {
         codeterminal_run.addEventListener("click", () => {
+            const compareanswer = answer.replaceAll(/\s/g, "")
             let proposed = codeterminal_code.value
-            proposed = proposed.trim()
             proposed = proposed.replaceAll(/#[\s\S]+?\n/g, "\n")
+            proposed = proposed.replaceAll(/\s/g, "")
             proposed = proposed.replaceAll("'", '"')
-            proposed = proposed.trim();
             proposed = proposed.toLowerCase();
             codeterminal.classList.remove("show");
             resolve({
-                success: answer.trim().toLowerCase() == proposed,
+                success: compareanswer.toLowerCase() == proposed,
                 raw: codeterminal_code.value
             })
         }, {once: true})
