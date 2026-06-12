@@ -29,6 +29,7 @@ body::before {
     position: fixed;
     background-color: black;
     min-width: 200px;
+    max-width: 45vw;
     width: auto;
     height: auto;
     top: 35px;
