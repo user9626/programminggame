@@ -80,7 +80,7 @@ characterMovementLoop();
 
     document.getElementById("terminal").classList.remove("full")
 
-    /*setTimeout(terminal_buddy("(^ o ^)", "(^ _ ^)"), 1000);
+    setTimeout(terminal_buddy("(^ o ^)", "(^ _ ^)"), 1000);
     terminal_text("You can use WASD to move your character!", 1000);
     await wait(3000)
 
@@ -131,8 +131,8 @@ characterMovementLoop();
     const bulletspawn1 = setInterval(() => {
         summonBullet("Hello World!")
     }, 3000)
-    await wait(3500)*/
-
+    await wait(3500)
+    
     setTimeout(terminal_buddy("(^ o ^)", "(^ _ ^)"), 1000);
     terminal_text("That's not all though, we can also shoot multiple bullets at once!", 1000);
     await wait(3500)

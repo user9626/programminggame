@@ -2,6 +2,7 @@ body {
     overflow: hidden;
     --backgroundx: 0px;
     --backgroundy: 0px;
+    user-select: none;
 }
 body::before {
     content: "";
