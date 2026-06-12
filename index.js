@@ -80,7 +80,7 @@ characterMovementLoop();
 
     document.getElementById("terminal").classList.remove("full")
 
-    setTimeout(terminal_buddy("(^ o ^)", "(^ _ ^)"), 1000);
+    /*setTimeout(terminal_buddy("(^ o ^)", "(^ _ ^)"), 1000);
     terminal_text("You can use WASD to move your character!", 1000);
     await wait(3000)
 
@@ -131,22 +131,26 @@ characterMovementLoop();
     const bulletspawn1 = setInterval(() => {
         summonBullet("Hello World!")
     }, 3000)
-    await wait(3500)
+    await wait(3500)*/
 
     setTimeout(terminal_buddy("(^ o ^)", "(^ _ ^)"), 1000);
     terminal_text("That's not all though, we can also shoot multiple bullets at once!", 1000);
     await wait(3500)
 
     setTimeout(terminal_buddy("(^ o ^)", "(^ _ ^)"), 3000);
-    terminal_text("To do this, we can create a loop! Specifically a for loop! To do this in Python, you can do the following:\n\nfor i in range(x):\n   shoot()\n\nWhere x can be replaced with how many times you want to repeat.", 3000);
-    await wait(10000)
+    terminal_text("To do this, we can create a loop! Specifically a *for loop*! This allows code to be repeated multiple times!", 3000);
+    await wait(5000)
+
+    setTimeout(terminal_buddy("(^ o ^)", "(^ _ ^)"), 4500);
+    terminal_text("To do this in Python, you can do the following:\n\nfor i in range(3):\n   shoot()\n\nIn this code, 'for i in range(3):' means to repeat the indented code 3 times, in this case 'shoot()'", 4500);
+    await wait(18000)
 
     setTimeout(terminal_buddy("(⋅ o ⋅)", "(⋅ _ ⋅)"), 1000);
-    terminal_text(`You try! Create a *for loop* that runs the shoot("Hi") function 10 times! Tip: You can press tab to create an indent!`, 1000);
+    terminal_text(`You try! Create a *for loop* that runs the shoot function 10 times! Tell the shoot function 'Hi' (put 'Hi' inside the shoot function's brackets)\nTip: You can press tab to create an indent!`, 1000);
     let forlooppuzzle = await runPuzzle("", 'for i in range(10):\n    shoot("Hi")');
     while (!forlooppuzzle.success) {
-        setTimeout(terminal_buddy("(⋅ o ⋅)", "(⋅ _ ⋅)"), 1000);
-        await terminal_text("This one's more difficult! Remember, you can write a for loop by doing:\n\nfor i in range(x):\n    # shoot function that says 'hi'\n\n...and remember to shoot exactly 10 times!", 1000);
+        setTimeout(terminal_buddy("(⋅ o ⋅)", "(⋅ _ ⋅)"), 2000);
+        await terminal_text(`This one's more difficult! If you need a hint, write:\n\nfor i in range(3):\n    shoot()\n\nThis code repeats the indented code 'shoot()' 3 times! Your goal is to repeat the code 'shoot("Hi")' 10 times. Try modifing the '3' and adding something to the 'shoot()' function\n\nTip: press tab to indent and don't forget the colon after 'for i in range()!`, 2000);
         forlooppuzzle = await runPuzzle(forlooppuzzle.raw, 'for i in range(10):\n    shoot("Hi")')
     }
     clearInterval(bulletspawn1)
