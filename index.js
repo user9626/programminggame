@@ -106,7 +106,7 @@ characterMovementLoop();
     }
 
     setTimeout(terminal_buddy("(⋅ o ⋅)", "(⋅ _ ⋅)"), 1000);
-    terminal_text("Great job! If you ran that script, it would say:\nHello World!", 1000);
+    terminal_text("Great job! If you ran that script, it would say:\n\nHello World!", 1000);
     await wait(3500)
 
     setTimeout(terminal_buddy("(^ o ^)", "(^ _ ^)"), 1000);
@@ -122,7 +122,7 @@ characterMovementLoop();
     let shootpuzzle = await runPuzzle("", 'shoot("Hello World!")');
     while (!shootpuzzle.success) {
         setTimeout(terminal_buddy("(⋅ o ⋅)", "(⋅ _ ⋅)"), 1000);
-        await terminal_text("That's not it! Just write:\n\n"+'shoot("Hello World")', 1000);
+        await terminal_text(`That's not it! Just write:\n\nshoot("Hello World!")\n\nDon't forget the exclamation mark!`, 1000);
         shootpuzzle = await runPuzzle(shootpuzzle.raw, 'shoot("Hello World!")')
     }
 
